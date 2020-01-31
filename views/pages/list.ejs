@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+<body class="container">
+    <header>
+        <% include('../partials/header'); %>
+    </header>
+    <main>
+        <div class="jumbotron">
+            <h4><%= heading %></h4>
+            <table>            
+                <tr>
+                    <th with="20%">Title</th>
+                    <th with="20%">ISBN</th>
+                    <th>Description</th>
+                    <thActions</th>
+                </tr>
+                
+                <%if (books.length >0) { %>
+                    <% books.forEach(function(row){ %>
+                    <tr>
+                        <td><%= row.title %></td>
+                        <td><%= row.isbn %></td>
+                        <td><%= row.description %></td>
+                        <td>Edit| Delete</td>
+                    </tr>  
+                    
+                    <% })
+                }else { %>
+
+                    <tr>
+                        <td> No records found.</td>
+                    </tr>
+                
+                <% } %>
+
+            </table>
+        </div>
+    </main>
+    <footer>
+        <% include('../partials/footer'); %>
+
+    </footer>
+</body>
+</html>

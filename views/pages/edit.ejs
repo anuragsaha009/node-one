@@ -1,0 +1,43 @@
+<%
+
+var path = "http://localhost:3000/book/update/"+book.id;
+
+%>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+    </head>
+<body class="container">
+    <header>
+    </header>
+    <main>
+        <div class="jumbotron">
+            <h4><%= heading %></h4>
+            <form method="post" action="<%= path %>">
+                <input type="hidden" value="PUT" />
+                <table>            
+                    <tr>
+                        <td>Title</td>
+                        <td><input name="title" value="<%= book.title %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td><input name="description" value="<%= book.description %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>ISBN</td>
+                        <td><input name="isbn" value="<%= book.isbn %>" /></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><input type="submit" value="Update" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </main>
+    <footer>
+    </footer>
+</body>
+</html>
